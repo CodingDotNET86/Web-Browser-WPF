@@ -8,6 +8,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1024">
     <Grid>
-        <cef:ChromiumWebBrowser x:Name="Browser" Address="https://www.google.co.uk" />
+        <cef:ChromiumWebBrowser x:Name="Browser" Address="https://www.google.co.uk"/>
     </Grid>
 </Window>
