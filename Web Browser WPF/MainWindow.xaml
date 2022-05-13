@@ -8,6 +8,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="720" Width="1024">
     <Grid>
-        <cef:ChromiumWebBrowser x:Name="Browser_Test" Address="https://www.google.com" />
+        <local:TabContent x:Name="DefaultBrowser" Url="https://www.ebay.com" />
     </Grid>
 </Window>
