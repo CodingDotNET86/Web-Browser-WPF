@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Web_Browser_WPF"
         xmlns:cef="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1024">
+        Title="MainWindow" Height="720" Width="1024" Background="#FF151515">
     <Grid>
         <local:TabContent x:Name="DefaultBrowser" Url="https://www.ebay.com" />
     </Grid>

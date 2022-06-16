@@ -140,6 +140,27 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\Browser_Arrow_L_Dull_20.png" />
+    <Resource Include="Assets\Icons\Browser_Arrow_L_D_20.png" />
+    <Resource Include="Assets\Icons\Browser_Arrow_R_Dull_20.png" />
+    <Resource Include="Assets\Icons\Browser_Arrow_R_D_20.png" />
+    <Resource Include="Assets\Icons\Close.png" />
+    <Resource Include="Assets\Icons\Close_s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\Padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\Bookmark.png" />
+    <Resource Include="Assets\Icons\Home.png" />
+    <Resource Include="Assets\Icons\Menu.png" />
+    <Resource Include="Assets\Icons\Refresh_D.png" />
+    <Resource Include="Assets\Icons\Stop.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
