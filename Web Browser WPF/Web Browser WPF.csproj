@@ -92,6 +92,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="TabContent.xaml.cs">
+      <DependentUpon>TabContent.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Assets\Icons\SVG\Icons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -104,6 +111,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="TabContent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Templates\DataTemplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -132,6 +147,35 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\Browser_Arrow_L_Dull_20.png" />
+    <Resource Include="Assets\Icons\Browser_Arrow_L_D_20.png" />
+    <Resource Include="Assets\Icons\Browser_Arrow_R_Dull_20.png" />
+    <Resource Include="Assets\Icons\Browser_Arrow_R_D_20.png" />
+    <Resource Include="Assets\Icons\Close.png" />
+    <Resource Include="Assets\Icons\Close_s.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\Padlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\Bookmark.png" />
+    <Resource Include="Assets\Icons\Home.png" />
+    <Resource Include="Assets\Icons\Menu.png" />
+    <Resource Include="Assets\Icons\Refresh_D.png" />
+    <Resource Include="Assets\Icons\Stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\Close10.png" />
+    <Resource Include="Assets\Icons\MaximizeContrast10.png" />
+    <Resource Include="Assets\Icons\MaximizeContrast10_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\MinimizeContrast10.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

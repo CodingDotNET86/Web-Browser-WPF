@@ -6,8 +6,53 @@
         xmlns:local="clr-namespace:Web_Browser_WPF"
         xmlns:cef="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1024">
+        Title="MainWindow" Height="720" Width="1024" Background="#FF151515" MinWidth="500" MinHeight="500"
+        WindowStyle="None" AllowsTransparency="True" WindowStartupLocation="CenterScreen" StateChanged="Window_StateChanged">
+    <WindowChrome.WindowChrome>
+        <WindowChrome CaptionHeight="55"/>
+    </WindowChrome.WindowChrome>
+    
     <Grid>
-        <cef:ChromiumWebBrowser x:Name="Browser" Address="https://www.google.co.uk" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="55"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Panel.ZIndex="1024">
+            <StackPanel WindowChrome.IsHitTestVisibleInChrome="True" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
+                <Button Style="{DynamicResource CaptionBtns}" x:Name="MinimizeButton" Width="32" Height="32" Background="Transparent" BorderBrush="Transparent" Padding="0">
+                    <Viewbox Width="10" Height="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Image Source="Assets/Icons/MinimizeContrast10.png" />
+                    </Viewbox>
+                </Button>
+
+                <Button Style="{DynamicResource CaptionBtns}" x:Name="MaximizeButton" Width="32" Height="32" Background="Transparent" BorderBrush="Transparent" Padding="0">
+                    <Viewbox Width="10" Height="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Image Source="Assets/Icons/MaximizeContrast10_2.png" />
+                    </Viewbox>
+                </Button>
+                
+                <Button Style="{DynamicResource CloseBtnStyle}" x:Name="CloseBtn" Width="32" Height="32" Background="Transparent" BorderBrush="Transparent" Padding="0">
+                    <Viewbox Width="10" Height="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Image Source="Assets/Icons/Close10.png" />
+                    </Viewbox>
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <TabControl WindowChrome.IsHitTestVisibleInChrome="True" x:Name="TabControl" Background="Transparent" BorderThickness="0" Grid.Row="0" Grid.RowSpan="2">
+            <TabItem HeaderTemplate="{DynamicResource TabHeaderTemplate}">
+                <local:TabContent/>
+            </TabItem>
+            <TabItem HeaderTemplate="{DynamicResource TabHeaderTemplate}">
+                <local:TabContent/>
+            </TabItem>
+            <TabItem HeaderTemplate="{DynamicResource TabHeaderTemplate}">
+                <local:TabContent/>
+            </TabItem>
+            <TabItem HeaderTemplate="{DynamicResource TabHeaderTemplate}">
+                <local:TabContent/>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>
